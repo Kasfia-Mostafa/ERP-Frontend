@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #222222;
+  --color-orange-vibrant: #FF6D1F;
+  --color-orange-secondary: #F0A04B;
+  --color-cream: #F5E7C6;
+  --color-bgLight: #FAF3E1;
+  --color-gold: #FADA7A;
+  --color-sage: #B1C29E;
+  --color-peach: #FCE7C8;
+  
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-vintage: 'Merriweather', Georgia, serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bgLight);
+    color: var(--color-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-vintage), system-ui, serif;
+  }
+}
+
+/* Vintage / Retro Styles */
+.vintage-font-title {
+  font-family: var(--font-serif);
+}
+
+.vintage-font-body {
+  font-family: var(--font-vintage);
+}
+
+.vintage-card {
+  background-color: #FAF6ED; /* Warm parchment color */
+  border: 1px solid #dcd4b8;
+  border-bottom: 3px solid #bba377;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  font-family: var(--font-vintage);
+  transition: all 0.2s ease-in-out;
+}
+
+.vintage-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px -2px rgba(187, 163, 119, 0.2);
+}
+
+.vintage-card-header {
+  border-bottom: 2px double #bba377;
+  font-family: var(--font-serif);
+  color: var(--color-dark);
+}
+
+.vintage-table-container {
+  border: 1px solid #dcd4b8;
+  border-bottom: 3px solid #bba377;
+  border-radius: 4px;
+  background-color: #FAF6ED;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.vintage-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-vintage);
+}
+
+.vintage-table th {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: #F3EBD9; /* Slightly darker cream for header */
+  border-bottom: 2px solid #222222;
+  color: #222222;
+}
+
+.vintage-table tr {
+  transition: background-color 0.15s ease;
+}
+
+.vintage-table tr:hover {
+  background-color: #F7F1E1;
+}
+
+.vintage-table td {
+  border-bottom: 1px dashed #dcd4b8;
+  color: #2b2b2b;
+}
+
+/* Vintage input fields */
+.vintage-input {
+  background-color: #FAF6ED;
+  border: 1px solid #bba377;
+  border-radius: 4px;
+  font-family: var(--font-vintage);
+  color: var(--color-dark);
+}
+
+.vintage-input:focus {
+  border-color: var(--color-orange-vibrant);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 109, 31, 0.15);
+}
+
+/* Custom styled vintage select dropdowns */
+.vintage-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image:
+    linear-gradient(to bottom, #dcd4b8, #dcd4b8),
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23705a3a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 2.25rem center, right 0.65rem center;
+  background-size: 1px 60%, 0.85rem;
+  padding-right: 3rem !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vintage-select:hover {
+  background-color: #F7F1E1;
+  border-color: #a4916a;
+  box-shadow: 0 2px 6px rgba(187, 163, 119, 0.18);
+}
+
+.vintage-select:focus {
+  border-color: var(--color-orange-vibrant);
+  box-shadow: 0 0 0 2px rgba(255, 109, 31, 0.15);
+  background-image:
+    linear-gradient(to bottom, #bba377, #bba377),
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF6D1F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+/* Vintage primary button — warm leather with gold emboss */
+.vintage-btn-primary {
+  background: linear-gradient(180deg, #FF8A3D 0%, #E5621A 100%);
+  color: #fff;
+  border: 1px solid #c4520f;
+  border-bottom: 2px solid #a4430a;
+  border-radius: 4px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(187, 163, 119, 0.2), inset 0 1px 0 rgba(255,255,255,0.15);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.vintage-btn-primary:hover {
+  background: linear-gradient(180deg, #FF9A55 0%, #FF6D1F 100%);
+  box-shadow: 0 4px 12px rgba(187, 163, 119, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+  transform: translateY(-1px);
+}
+
+.vintage-btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(187, 163, 119, 0.2);
+  border-bottom-width: 1px;
+}
+
+.vintage-btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Vintage secondary / outline button */
+.vintage-btn-secondary {
+  background: linear-gradient(180deg, #FEFCF6 0%, #F3EBD9 100%);
+  color: var(--color-dark);
+  border: 1px solid #bba377;
+  border-bottom: 2px solid #a4916a;
+  border-radius: 4px;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(187, 163, 119, 0.12);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.vintage-btn-secondary:hover {
+  background: linear-gradient(180deg, #FFF9ED 0%, #EDE3CC 100%);
+  border-color: #a4916a;
+  box-shadow: 0 3px 8px rgba(187, 163, 119, 0.2);
+  transform: translateY(-1px);
+}
+
+.vintage-btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(187, 163, 119, 0.1);
+  border-bottom-width: 1px;
+}
+
+.vintage-btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Vintage small icon button */
+.vintage-btn-icon {
+  background: linear-gradient(180deg, #FEFCF6 0%, #F3EBD9 100%);
+  border: 1px solid #dcd4b8;
+  border-radius: 4px;
+  color: #705a3a;
+  box-shadow: 0 1px 2px rgba(187, 163, 119, 0.1);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.vintage-btn-icon:hover {
+  background: linear-gradient(180deg, #FFF9ED 0%, #EDE3CC 100%);
+  border-color: #bba377;
+  color: var(--color-dark);
+  box-shadow: 0 2px 6px rgba(187, 163, 119, 0.2);
+  transform: translateY(-1px);
+}
+
+.vintage-btn-icon.vintage-btn-danger:hover {
+  background: linear-gradient(180deg, #fef2f2 0%, #fee2e2 100%);
+  border-color: #fca5a5;
+  color: #dc2626;
+}
