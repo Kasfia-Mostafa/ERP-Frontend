@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { LayoutDashboard, ShoppingCart, LogOut, Package, User, Boxes, ChevronsLeft, ChevronsRight, Menu } from 'lucide-react';
+import { LayoutDashboard, ShoppingCart, LogOut, Package, Users, User, Boxes, ChevronsLeft, ChevronsRight, Menu } from 'lucide-react';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Authentication states and routing utilities
@@ -37,6 +37,12 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       path: '/sales',
       icon: <ShoppingCart className="h-5 w-5" />,
       permission: 'create_sales',
+    },
+    {
+      name: 'Users',
+      path: '/users',
+      icon: <Users className="h-5 w-5" />,
+      permission: 'manage_users',
     },
   ];
 

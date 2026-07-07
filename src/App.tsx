@@ -7,6 +7,7 @@ import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
 import { Products } from './pages/Products';
 import { Sales } from './pages/Sales';
+import { Users } from './pages/Users';
 
 const DefaultRedirect: React.FC = () => {
   const { user } = useAuth();
@@ -47,6 +48,14 @@ const AppContent: React.FC = () => {
             element={
               <Layout>
                 <Sales />
+              </Layout>
+            }
+          />
+          <Route
+            path="/users"
+            element={
+              <Layout>
+                <Users />
               </Layout>
             }
           />
